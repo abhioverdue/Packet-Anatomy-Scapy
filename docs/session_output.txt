@@ -1,0 +1,12 @@
+ 1  Ether / IP / TCP 10.0.0.1:43210 > 10.0.0.2:http S
+ 2  Ether / IP / TCP 10.0.0.2:http > 10.0.0.1:43210 SA
+ 3  Ether / IP / TCP 10.0.0.1:43210 > 10.0.0.2:http A
+ 4  Ether / IP / TCP 10.0.0.1:43210 > 10.0.0.2:http PA / Raw
+ 5  Ether / IP / TCP 10.0.0.2:http > 10.0.0.1:43210 A
+ 6  Ether / IP / TCP 10.0.0.2:http > 10.0.0.1:43210 PA / Raw
+ 7  Ether / IP / TCP 10.0.0.1:43210 > 10.0.0.2:http A
+ 8  Ether / IP / TCP 10.0.0.1:43210 > 10.0.0.2:http FA
+ 9  Ether / IP / TCP 10.0.0.2:http > 10.0.0.1:43210 FA
+10  Ether / IP / TCP 10.0.0.1:43210 > 10.0.0.2:http A
+
+Saved captures/http_session.pcap

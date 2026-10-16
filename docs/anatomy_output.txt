@@ -1,0 +1,32 @@
+=== Building layer by layer ===
+
+>>> Ether(): 02:00:00:00:00:01 > 02:00:00:00:00:02 (0x9000)
+>>> + IP():   Ether / 10.0.0.1 > 10.0.0.2 hopopt
+>>> + TCP():  Ether / IP / TCP 10.0.0.1:43210 > 10.0.0.2:http S
+
+Frame length: 54 bytes
+
+[Layer 2] Ethernet II  (bytes 0-13)
+  raw      : 02 00 00 00 00 02 02 00 00 00 00 01 08 00
+  dst MAC  : 02:00:00:00:00:02
+  src MAC  : 02:00:00:00:00:01
+  ethertype: 0x0800 (IPv4)
+
+[Layer 3] IPv4  (bytes 14-33)
+  raw      : 45 00 00 28 12 34 40 00 40 06 14 9a 0a 00 00 01 0a 00 00 02
+  version  : 4   IHL: 5 (20 bytes)
+  tos      : 0x00   total length: 40
+  id       : 0x1234   flags: 010 (DF=1)   frag offset: 0
+  ttl      : 64   protocol: 6 (TCP)
+  checksum : 0x149a   valid: True
+  src -> dst: 10.0.0.1 -> 10.0.0.2
+
+[Layer 4] TCP  (bytes 34-53)
+  raw      : a8 ca 00 50 00 00 03 e8 00 00 00 00 50 02 fa f0 f3 ec 00 00
+  ports    : 43210 -> 80
+  seq      : 1000   ack: 0
+  data off : 5 (20 bytes)   flags: 0x02 ['SYN']
+  window   : 64240   urgent: 0
+  checksum : 0xf3ec   valid (pseudo-header): True
+
+Saved captures/single_syn.pcap (open in Wireshark to compare)

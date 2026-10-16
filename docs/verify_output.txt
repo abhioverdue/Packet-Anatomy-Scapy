@@ -1,0 +1,13 @@
+ # flags       seq    ack  len  result
+ 1 SYN        1000      0    0  OK
+ 2 SYN+ACK    5000   1001    0  OK
+ 3 ACK        1001   5001    0  OK
+ 4 PSH+ACK    1001   5001   34  OK
+ 5 ACK        5001   1035    0  OK
+ 6 PSH+ACK    5001   1035   53  OK
+ 7 ACK        1035   5054    0  OK
+ 8 FIN+ACK    1035   5054    0  OK
+ 9 FIN+ACK    5054   1036    0  OK
+10 ACK        1036   5055    0  OK
+
+ALL PACKETS MATCH
