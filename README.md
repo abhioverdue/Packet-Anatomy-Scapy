@@ -1,4 +1,4 @@
-# packet-anatomy-scapy
+# Packet Anatomy Scapy
 
 Build an Ethernet → IPv4 → TCP packet **layer by layer** with [Scapy](https://github.com/secdev/scapy),
 print every header field with byte offsets, and **prove** the result is correct with an independent,
